@@ -22,11 +22,11 @@ An example: say we place two hundred bacteria on a empty world. Let's say that b
 
 This is nothing more than a thought experiment, but it is a thought experiment that we can describe with a **differential equation**. Such an equation tells us, in detail, the rules by which some quantity changes. For our bacteria it looks like below.
 
-![exp growth words](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth words.png)
+<img src="images\exp growth words.png" alt="exp growth words" style="zoom:67%;" />
 
 If we want to be fancy we can write this out in mathematical notation.
 
-![exp growth differential](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth differential.png)
+![exp growth differential](images\exp growth differential.png)
 
 Same equation and same meaning. We've just given everything shorter names. The variable $N$ is the total number of bacteria, and $\frac{dN}{dt}$ is the new bacteria per day. The $t$ represents our unit of time, which is one day. 
 
@@ -38,7 +38,7 @@ Well, there is one other rule: the **initial condition**. At the beginning of ti
 
 Now that we have the initial condition and the rules of change we can predict the entire future of our world. Back in the day you'd have to do all the calculations by hand, but now we can plug the differential equation and initial condition into the computer and it will do the hard work for us. Ask the computer to make a graph of how the population size grows and you'll get something like below.
 
-![image-20201112210021774](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth graph basic.png)
+<img src="images\exp growth graph basic.png" alt="image-20201112210021774" style="zoom:80%;" />
 
 The only thing that changes in this world -- and the only thing we keep track of -- is the number of bacteria $N$. This is what we call a **state variable**. This graph tells us the value of $N$ at each point in time. You could almost think of this graph as showing the entire course of this world's history.
 
