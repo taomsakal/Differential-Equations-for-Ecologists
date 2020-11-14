@@ -1,8 +1,8 @@
 # Differential Equation for Ecologists 
 
-## (Exponential Growth, Logistic Growth, and Lotka-Volterra)
+## Exponential Growth, Logistic Growth, and Lotka-Volterra
 
-#### Taom Sakal, EEMB 120 2020
+#### Taom Sakal, EEMB 120, 2020
 
 
 
@@ -44,17 +44,17 @@ The only thing that changes in this world -- and the only thing we keep track of
 
 The per capita rate of growth is a constant and never changes, so we call it a **parameter**. *While the world is running* parameters never change. Now, we could of restarted the world and said that when bacteria reproduce they split into not two daughter cells, but *three*. Then the per-capita rate of new bacteria per day is two instead of one. We could re-run the world with this number instead and get a graph where the population size quickly grows off the chart.
 
-![image-20201112210107495](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth r equal 2.png)
+<img src="images\exp growth r equal 2.png" alt="image-20201112210107495" style="zoom:80%;" />
 
 Well, what happens if bacteria split into four? Or what if they only make on average half a new bacteria a day? What if each bacteria die on average once a day? With only the computer we'd have to restart the world and rerun the equations for each of these to see what happens.
 
 The great strength of modern mathematics is that we can study all of these possibilities at once with one weird trick: call the per-capita birth rate $b$. Now $b$ can take any value we want, anything between infinity and negative infinity. Now we can write down the exponential growth equation we saw in class.
 
-![exp growth differential births](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth differential births.png)
+![exp growth differential births](\images\exp growth differential births.png)
 
 We can also allow the initial number of bacteria to vary. This is usually denoted by $N(0) = N_0$. In differential equations $N(t)$ is shorthand for "the number of bacteria at time $t$." So $N(0)$ is the number of bacteria at time zero. (In differential equations the convention is to say that time starts at zero). We set $N(0)$ equal to $N_0$, which is just a parameter like $b$ which we can replace whatever number we want. The full system, complete with initial conditions, is now written below.
 
-![exp growth differential with initial](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth differential with initial.png)
+<img src="images\exp growth differential with initial.png" alt="exp growth differential with initial" style="zoom:67%;" />
 
 This equation represents not just one world of bacteria, but *all* possible worlds. Well, at least all possible world with the simple rules of change we've written down. By changing the values of $r$ and $N_0$ we can choose any rate of change and initial condition we want. (Though for $N_0$ negative values don't make biological sense.) 
 
@@ -62,7 +62,7 @@ Note that people usually just write down the differential equation. They'll desc
 
 Below is an animation showing how the graph changes as we tweak the parameter values. 
 
-![exponential growth only births](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exponential growth only births.gif)
+![exponential growth only births](images\exponential growth only births.gif)
 
 Congratulations. You've just made your first differential equation. It's a sophisticated thought experiment. We've created an imaginary world inspired by our own, laid out the rules of change for the world, and set up some starting conditions. Then we let the world move forward in time, changing according to our rules. It's a **model** of our world. Not near the complexity of the real thing, but perhaps it can tell us something about our reality.
 
@@ -74,21 +74,21 @@ In our imaginary world bacteria never grow old and never die. They just live and
 
 Each day we then have $b N$ bacteria added and $\mu N$ bacteria taken away. We can then write our differential equation as
 
-![exp growth with death](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth with death.png)
+![exp growth with death](images\exp growth with death.png)
 
 If we distribute the $N$ out this becomes 
 
-![exp growth with death simple](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth with death simple.png)
+![exp growth with death simple](images\exp growth with death simple.png)
 
 Now the $(b - \mu)$ term gives us the net per-capita rate of change. If the birth rate $b$ is higher than the death rate $\mu$ then this term is positive and the rate of change of the population $\frac{dN}{dt}$ is positive, meaning the population grows. On the other hand, If $\mu$ is higher than $b$ then $\frac{dN}{dt}$ is negative the population shrinks. Finally, if births and deaths exactly cancel each other out then $(b - \mu)$ is zero and $\frac{dN}{dt}$ becomes zero. Then the population size neither increases or decreases, but stays the same.
 
 Instead of writing out $(b-\mu)$ ecologists will just call this entire term the effective rate of growth $r$. This parameter sums up the effects of births and deaths together. 
 
-![exp growth with r](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth with r.png)
+![exp growth with r](images\exp growth with r.png)
 
 Conveniently this equation looks exactly like our $\frac{dN}{dt} = b N$ equation, except now instead of $b$ we have $r$. When we run this world it acts exactly the same as our previous one. The only difference is our interpretation of what the parameter values mean: net per-capita growth rate instead of per-capita rate of births. (This also means that negative values of the parameter now make biological sense.)
 
-![exp growth negative r](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\exp growth negative r.gif)
+![exp growth negative r](images\exp growth negative r.gif)
 
 This form of the equation, with both births and deaths wrapped up in this $r$ term, is what biologists are talking about when they talk about a model of **exponential growth**.
 
@@ -130,19 +130,19 @@ Let's make a new world then, one where $r$ decreases as $N$ increases. Exactly h
 
 A nice function that will do all this for us is shown below. The vertical axis here is the effective per-capita growth rate, or the current per-captia growth rate taking into account the current population size. The vertical axis is *not* the population size.
 
-![Logistic rate of growth](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\Logistic rate of growth.png)
+![Logistic rate of growth](images\Logistic rate of growth.png)
 
 As we wanted, the per-capita growth rate decreases linearly as $N$ increases. Now we can take our equation for exponential growth and replace the previous static $r$ with this new dynamic growth rate.
 
-![Logistic equation](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\Logistic equation.png)
+<img src="images\Logistic equation.png" alt="Logistic equation" style="zoom: 67%;" />
 
 This model is called **logistic growth**, and it always makes this S-shaped curve. The graph of this equation looks like below.
 
-![image-20201112211708972](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\Logistic curve basic.png)
+![image-20201112211708972](images\Logistic curve basic.png)
 
 Below I've animated it to change the values of $K$, $r_{max}$, and $N_0$ vary. Notice that if the population starts over carrying capacity the growth rate will be negative and bacteria will die until the population returns to carrying capacity.
 
-![logistic growth ani](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\logistic growth ani.gif)
+![logistic growth ani](images\logistic growth ani.gif)
 
 Notice something important: we've never specified *why* the per-capita growth rate decreases with more bacteria. It could be limited space, or competition over food, or any complex combination of factors. All we've said is that $r$ decreases linearly as $N$ increases. 
 
@@ -161,23 +161,23 @@ A world of only bacteria is boring, no matter how the grow. Let's add another or
 
 It would make sense that cats and bacteria both grow logistically, and it would make sense if they don't care about each other. Bacteria can eat whatever junk they find in the dirt, cats can eat tuna, and they never interact. Such a world could be described with the following system.
 
-![logistic cats and bact](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\logistic cats and bact.png)
+![logistic cats and bact](images\logistic cats and bact.png)
 
 Here $r_{max, C}$ is the maximum per-capita growth rate of cats and $r_{max, N}$ is the maximum rate for bacteria. (Often people won't bother writing the "max" subscript, but we will.) Likewise $K_c$ and $K_b$ are their carrying capacities. We would also have some initial number of cats and bacteria: $C_0$ and $N_0$. Below is what this system's graph looks like. Notice that we now have two lines, one for cats and one for bacteria. Our world now has two creatures and we can keep track of the number of each.
 
-![image-20201112214910758](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\Logistic cats and bact no interaction.png)
+![image-20201112214910758](images\Logistic cats and bact no interaction.png)
 
 This is fine, but what if we change it so that each species *competes* with the other. Maybe bacteria also like to eat the cat's tuna and so they fight over the same food source. How might we do this? We can pull the same trick we used for logistic growth: say that the bacteria's per-captia growth rate decreases as there are more cats, and say that the cat's per-capita growth rate decreases as there are more bacteria. 
 
 This can be done by subtracting from the rate of growth. It is usually written something like
 
-![logistic cats and bact with comp](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\logistic cats and bact with comp.png)
+![logistic cats and bact with comp](images\logistic cats and bact with comp.png)
 
 This might look complex but it's not that bad. Focus on the top equation. Subtracting $\frac{C}{K_n}$ from the top equation is makes the per-capita growth rate of the bacteria decrease as cats increase. It works the same as how subtracting $\frac{N}{K_N}$ causes increasing numbers of bacteria to slow down the growth rate. The $\alpha_{N, C}$ is just a scaling constant which tells us *how much* the cats hurt the bacteria. The larger $\alpha_{N,C}$ is the more harm cats do. If $\alpha_{N, C}$ is negative then cats actually help bacteria and increase their growth rate. If $\alpha_{N, C}$ is zero than cats have no effect on bacteria. 
 
 The same goes for the bottom equation. Often people will have different symbols or conventions for naming the parameters, but as long as you understand the meaning of them you can read the equations. The graph of this system shows that we now can have much more complexity in the dynamics.
 
-![image-20201113103300546](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\Logistic Growth Cats and Bacteria)
+![image-20201113103300546](images\Logistic Growth Cats and Bacteria)
 
 An animated version is below.
 
@@ -206,10 +206,3 @@ While you wait, the [Wikipedia article](https://www.wikiwand.com/en/Lotka%E2%80%
 
 
 
-
-
-
-
-
-
-# Differential-Equations-for-Ecologists
