@@ -10,9 +10,9 @@ Here we'll review what differential equations are along with some common ones in
 
 
 
-`Note: I'm working on making less janky animations along with an interactive version where you can adjust sliders and see how the graphs respond. It's not done yet, but for the tech savvy among you the github has the source code for all the graphs. If you run that code you can manipulate the graphs yourselves with sliders.`
+*Note: This is a first draft. Let me know if you spot any mistakes or if any sections are confusing. I'll be updating these notes as I receive feedback. Equations aren't displaying properly on the [online version](https://taomsakal.github.io/Differential-Equations-for-Ecologists/) right now, but Gauchospace has a pdf version with working equations under week 6. (Though that version won't have animations!)*
 
-`Note 2: This is a first draft. Let me know if you spot any mistakes or if any sections are confusing! I'll be updating these notes as I recieve feedback.`
+
 
 ## Exponential growth and rules of change
 
@@ -50,7 +50,7 @@ Well, what happens if bacteria split into four? Or what if they only make on ave
 
 The great strength of modern mathematics is that we can study all of these possibilities at once with one weird trick: call the per-capita birth rate $b$. Now $b$ can take any value we want, anything between infinity and negative infinity. Now we can write down the exponential growth equation we saw in class.
 
-![exp growth differential births](\images\exp growth differential births.png)
+![exp growth differential births](images\exp growth differential births.png)
 
 We can also allow the initial number of bacteria to vary. This is usually denoted by $N(0) = N_0$. In differential equations $N(t)$ is shorthand for "the number of bacteria at time $t$." So $N(0)$ is the number of bacteria at time zero. (In differential equations the convention is to say that time starts at zero). We set $N(0)$ equal to $N_0$, which is just a parameter like $b$ which we can replace whatever number we want. The full system, complete with initial conditions, is now written below.
 
@@ -181,7 +181,7 @@ The same goes for the bottom equation. Often people will have different symbols 
 
 An animated version is below.
 
-![logistic growth ani with comp](F:\Google Drive (tsakal@ucsb.edu)\Bio\Writeups\diffeqs tutorial\images\logistic growth ani with comp.gif)
+![logistic growth ani with comp](images\logistic growth ani with comp.gif)
 
 ## Phase Spaces 
 
