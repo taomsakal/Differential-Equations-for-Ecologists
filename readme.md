@@ -56,7 +56,7 @@ We can also allow the initial number of bacteria to vary. This is usually denote
 
 <img src="images\exp growth differential with initial.png" alt="exp growth differential with initial" style="zoom:67%;" />
 
-This equation represents not just one world of bacteria, but *all* possible worlds. Well, at least all possible world with the simple rules of change we've written down. By changing the values of $r$ and $N_0$ we can choose any rate of change and initial condition we want. (Though for $N_0$ negative values don't make biological sense.) 
+This equation represents not just one world of bacteria, but *all* possible worlds. Well, at least all possible world with the simple rules of change we've written down. By changing the values of *r* and *N_<sub>0</sub>* we can choose any rate of change and initial condition we want. (Though for $N_0$ negative values don't make biological sense.)    
 
 Note that people usually just write down the differential equation. They'll describe the initial conditions in the text but they won't write it next to the differential equation like we did. For the rest of this text I'm going to follow this and only write out the differential equation. But remember in the back of your mind that each differential equation has a initial condition associated with it.
 
