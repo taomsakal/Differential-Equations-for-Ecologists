@@ -30,7 +30,7 @@ If we want to be fancy we can write this out in mathematical notation.
 
 ![exp growth differential](images\exp growth differential.png)
 
-Same equation and same meaning. We've just given everything shorter names. The variable <img src="https://render.githubusercontent.com/render/math?math=N"> is the total number of bacteria, and $<img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}$"> is the new bacteria per day. The <img src="https://render.githubusercontent.com/render/math?math=t"> represents our unit of time, which is one day. 
+Same equation and same meaning. We've just given everything shorter names. The variable <img src="https://render.githubusercontent.com/render/math?math=N"> is the total number of bacteria, and <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}"> is the new bacteria per day. The <img src="https://render.githubusercontent.com/render/math?math=t"> represents our unit of time, which is one day. 
 
 We see that the per-captia rate of growth (the green term) is one. This is because in our world when each bacteria divides we get two daughter cells -- a grand total of one bacteria more than what we started with. 
 
@@ -42,7 +42,7 @@ Now that we have the initial condition and the rules of change we can predict th
 
 <img src="images\exp growth graph basic.png" alt="image-20201112210021774" style="zoom:80%;" />
 
-The only thing that changes in this world -- and the only thing we keep track of -- is the number of bacteria $N$. This is what we call a **state variable**. This graph tells us the value of $N$ at each point in time. You could almost think of this graph as showing the entire course of this world's history.
+The only thing that changes in this world -- and the only thing we keep track of -- is the number of bacteria <img src="https://render.githubusercontent.com/render/math?math=N">. This is what we call a **state variable**. This graph tells us the value of $N$ at each point in time. You could almost think of this graph as showing the entire course of this world's history.
 
 The per capita rate of growth is a constant and never changes, so we call it a **parameter**. *While the world is running* parameters never change. Now, we could of restarted the world and said that when bacteria reproduce they split into not two daughter cells, but *three*. Then the per-capita rate of new bacteria per day is two instead of one. We could re-run the world with this number instead and get a graph where the population size quickly grows off the chart.
 
@@ -50,11 +50,11 @@ The per capita rate of growth is a constant and never changes, so we call it a *
 
 Well, what happens if bacteria split into four? Or what if they only make on average half a new bacteria a day? What if each bacteria die on average once a day? With only the computer we'd have to restart the world and rerun the equations for each of these to see what happens.
 
-The great strength of modern mathematics is that we can study all of these possibilities at once with one weird trick: call the per-capita birth rate $b$. Now $b$ can take any value we want, anything between infinity and negative infinity. Now we can write down the exponential growth equation we saw in class.
+The great strength of modern mathematics is that we can study all of these possibilities at once with one weird trick: call the per-capita birth rate <img src="https://render.githubusercontent.com/render/math?math=b">. Now <img src="https://render.githubusercontent.com/render/math?math=b"> can take any value we want, anything between infinity and negative infinity. Now we can write down the exponential growth equation we saw in class.
 
 ![exp growth differential births](images\exp growth differential births.png)
 
-We can also allow the initial number of bacteria to vary. This is usually denoted by $N(0) = N_0$. In differential equations $N(t)$ is shorthand for "the number of bacteria at time $t$." So $N(0)$ is the number of bacteria at time zero. (In differential equations the convention is to say that time starts at zero). We set $N(0)$ equal to $N_0$, which is just a parameter like $b$ which we can replace whatever number we want. The full system, complete with initial conditions, is now written below.
+We can also allow the initial number of bacteria to vary. This is usually denoted by <img src="https://render.githubusercontent.com/render/math?math=N(0)=N_0">. In differential equations <img src="https://render.githubusercontent.com/render/math?math=N(t)"> is shorthand for "the number of bacteria at time <img src="https://render.githubusercontent.com/render/math?math=t">." So <img src="https://render.githubusercontent.com/render/math?math=N(0)"> is the number of bacteria at time zero. (In differential equations the convention is to say that time starts at zero). We set $N(0)$ equal to $N_0$, which is just a parameter like $b$ which we can replace whatever number we want. The full system, complete with initial conditions, is now written below.
 
 <img src="images\exp growth differential with initial.png" alt="exp growth differential with initial" style="zoom:67%;" />
 
