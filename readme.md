@@ -16,8 +16,6 @@ Here we'll review what differential equations are along with some common ones in
 
 ## Exponential growth and rules of change
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
-
 Differential equations describe how nature changes over time. They write out the "rules of the game.''
 
 An example: say we place two hundred bacteria on a empty world. Let's say that bacteria are immortal and will replicate on average once per day. How many bacteria will there be after ten days? A hundred days? A thousand?
@@ -42,7 +40,7 @@ Now that we have the initial condition and the rules of change we can predict th
 
 <img src="images\exp growth graph basic.png" alt="image-20201112210021774" style="zoom:80%;" />
 
-The only thing that changes in this world -- and the only thing we keep track of -- is the number of bacteria <img src="https://render.githubusercontent.com/render/math?math=N">. This is what we call a **state variable**. This graph tells us the value of $N$ at each point in time. You could almost think of this graph as showing the entire course of this world's history.
+The only thing that changes in this world -- and the only thing we keep track of -- is the number of bacteria <img src="https://render.githubusercontent.com/render/math?math=N">. This is what we call a **state variable**. This graph tells us the value of <img src="https://render.githubusercontent.com/render/math?math=N>" at each point in time. You could almost think of this graph as showing the entire course of this world's history.
 
 The per capita rate of growth is a constant and never changes, so we call it a **parameter**. *While the world is running* parameters never change. Now, we could of restarted the world and said that when bacteria reproduce they split into not two daughter cells, but *three*. Then the per-capita rate of new bacteria per day is two instead of one. We could re-run the world with this number instead and get a graph where the population size quickly grows off the chart.
 
@@ -68,31 +66,31 @@ Below is an animation showing how the graph changes as we tweak the parameter va
 
 Congratulations. You've just made your first differential equation. It's a sophisticated thought experiment. We've created an imaginary world inspired by our own, laid out the rules of change for the world, and set up some starting conditions. Then we let the world move forward in time, changing according to our rules. It's a **model** of our world. Not near the complexity of the real thing, but perhaps it can tell us something about our reality.
 
-Creating these equations is a creative act. It should feel a little like designing a simulation, or worldbuilding for a novel, or -- for the megalomaniacs among you -- playing God. "In the beginning God created the heavens and the earth... And God said 'Let there be $N_0$ bacteria.'"
+Creating these equations is a creative act. It should feel a little like designing a simulation, or worldbuilding for a novel, or -- for the megalomaniacs among you -- playing God. "In the beginning God created the heavens and the earth... And God said 'Let there be <img src="https://render.githubusercontent.com/render/math?math=N_0"> bacteria.'"
 
 ### Death
 
-In our imaginary world bacteria never grow old and never die. They just live and make babies. That's a bit boring -- what's life without danger and mortality? So let's put the fear of death in our bacteria. Let us say that, along with being born, bacteria has a per-capita death rate of $\mu$. (In class we called this $d$, but I'm using $\mu$ so you don't get the death rate confused with the $d$'s in $\frac{dN}{dt}$ which mean something different.) The average number of bacteria that die each day is then $d N$. 
+In our imaginary world bacteria never grow old and never die. They just live and make babies. That's a bit boring -- what's life without danger and mortality? So let's put the fear of death in our bacteria. Let us say that, along with being born, bacteria has a per-capita death rate of <img src="https://render.githubusercontent.com/render/math?math=\mu>". (In class we called this <img src="https://render.githubusercontent.com/render/math?math=d>", but I'm using <img src="https://render.githubusercontent.com/render/math?math=\mu>" so you don't get the death rate confused with the <img src="https://render.githubusercontent.com/render/math?math=d>"'s in <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}>" which mean something different.) The average number of bacteria that die each day is then <img src="https://render.githubusercontent.com/render/math?math=dN>". 
 
-Each day we then have $b N$ bacteria added and $\mu N$ bacteria taken away. We can then write our differential equation as
+Each day we then have <img src="https://render.githubusercontent.com/render/math?math=bN>" bacteria added and <img src="https://render.githubusercontent.com/render/math?math=\mu%20N>" bacteria taken away. We can then write our differential equation as
 
 ![exp growth with death](images\exp growth with death.png)
 
-If we distribute the $N$ out this becomes 
+If we distribute the <img src="https://render.githubusercontent.com/render/math?math=N>" out this becomes 
 
 ![exp growth with death simple](images\exp growth with death simple.png)
 
-Now the $(b - \mu)$ term gives us the net per-capita rate of change. If the birth rate $b$ is higher than the death rate $\mu$ then this term is positive and the rate of change of the population $\frac{dN}{dt}$ is positive, meaning the population grows. On the other hand, If $\mu$ is higher than $b$ then $\frac{dN}{dt}$ is negative the population shrinks. Finally, if births and deaths exactly cancel each other out then $(b - \mu)$ is zero and $\frac{dN}{dt}$ becomes zero. Then the population size neither increases or decreases, but stays the same.
+Now the <img src="https://render.githubusercontent.com/render/math?math=(b-\mu)>" term gives us the net per-capita rate of change. If the birth rate <img src="https://render.githubusercontent.com/render/math?math=b>" is higher than the death rate <img src="https://render.githubusercontent.com/render/math?math=\mu>" then this term is positive and the rate of change of the population <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}>" is positive, meaning the population grows. On the other hand, If <img src="https://render.githubusercontent.com/render/math?math=\mu>" is higher than <img src="https://render.githubusercontent.com/render/math?math=b>" then <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}>" is negative the population shrinks. Finally, if births and deaths exactly cancel each other out then <img src="https://render.githubusercontent.com/render/math?math=(b-\mu)>" is zero and <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}>" becomes zero. Then the population size neither increases or decreases, but stays the same.
 
-Instead of writing out $(b-\mu)$ ecologists will just call this entire term the effective rate of growth $r$. This parameter sums up the effects of births and deaths together. 
+Instead of writing out <img src="https://render.githubusercontent.com/render/math?math=(b-\mu)>" ecologists will just call this entire term the effective rate of growth <img src="https://render.githubusercontent.com/render/math?math=r>". This parameter sums up the effects of births and deaths together. 
 
 ![exp growth with r](images\exp growth with r.png)
 
-Conveniently this equation looks exactly like our $\frac{dN}{dt} = b N$ equation, except now instead of $b$ we have $r$. When we run this world it acts exactly the same as our previous one. The only difference is our interpretation of what the parameter values mean: net per-capita growth rate instead of per-capita rate of births. (This also means that negative values of the parameter now make biological sense.)
+Conveniently this equation looks exactly like our <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}=bN>" equation, except now instead of <img src="https://render.githubusercontent.com/render/math?math=b>" we have <img src="https://render.githubusercontent.com/render/math?math=r>". When we run this world it acts exactly the same as our previous one. The only difference is our interpretation of what the parameter values mean: net per-capita growth rate instead of per-capita rate of births. (This also means that negative values of the parameter now make biological sense.)
 
 ![exp growth negative r](images\exp growth negative r.gif)
 
-This form of the equation, with both births and deaths wrapped up in this $r$ term, is what biologists are talking about when they talk about a model of **exponential growth**.
+This form of the equation, with both births and deaths wrapped up in this <img src="https://render.githubusercontent.com/render/math?math=r>" term, is what biologists are talking about when they talk about a model of **exponential growth**.
 
 ### Analytic Solutions
 
@@ -102,23 +100,23 @@ If the differential equations are simple enough we can write down an **analytic 
 
 If you wave your hand and do some black magic math you can derive that the analytic solution for the exponential growth equation. We won't cover how to do that math because this isn't a math class, but if you did do the math you'd get the equation below. 
 
-$$ N(t) = N_0 e^{rt} $$
+<img src="https://render.githubusercontent.com/render/math?math=N(t)=N_0e^{rt}>"
 
 Note that this is *not* a differential equation: it doesn't describe any rules of change. Instead it gives an answer. Remember, normally we'd if we wanted to know how many bacteria we get after ten days we would have to calculate out the entire history of our bacteria-world up to day ten. But with an analytic solution we can just plug in our values.  
 
-Let's try this. We originally said we started with $N_0 = 200$ bacteria and that bacteria had a growth rate of $r=1$. Time is measured in days, so we want to figure out what the population at time $t=10$ is. Then the equation is just
+Let's try this. We originally said we started with <img src="https://render.githubusercontent.com/render/math?math=N_0=200>" bacteria and that bacteria had a growth rate of <img src="https://render.githubusercontent.com/render/math?math=r=1>". Time is measured in days, so we want to figure out what the population at time <img src="https://render.githubusercontent.com/render/math?math=t=10>" is. Then the equation is just
 
-$$N(10) = 200 e^{1 \cdot 10}$$
+<img src="https://render.githubusercontent.com/render/math?math=N(10)=200e^{1\cdot%2010}>"
 
 which comes out to be about 4,405,293 bacteria. We can also calculate one thousand days 
 
-$$N(100) = 200 e^{1 \cdot 100}$$
+<img src="https://render.githubusercontent.com/render/math?math=N(100)=200e^{1\cdot%20100}>"
 
 which is 5,376,234,283,632,271,337,692,923,858,589,087,101,253,320,704 bacteria. If we go up to one thousand days 
 
-$$N(1000) = 200 e^{1 \cdot 1000}$$
+<img src="https://render.githubusercontent.com/render/math?math=N(1000)=200e^{1\cdot%201000}>"
 
-we get that there are around $3.94 \times 10^{436}$ bacteria. For reference there are around $10^{82}$ atoms in the universe. Such is the power of exponential growth.
+we get that there are around <img src="https://render.githubusercontent.com/render/math?math=3.94\times%2010^{436}>" bacteria. For reference there are around <img src="https://render.githubusercontent.com/render/math?math=10^{82}>" atoms in the universe. Such is the power of exponential growth.
 
 ## Logistic Growth
 
@@ -126,15 +124,15 @@ In our previous examples we let bacteria grow exponentially. In a hundred days w
 
 Because our universe is not covered in bacteria by now we can safely say something in our model is wrong. Well, not wrong -- the model is just a thought experiment after all. But this thought experiment differs from reality in some way.
 
-A little thought and you will see that the problem is that a bacterial population cannot always grow at one rate. Eventually they will run out of space, or run out of food, or start fighting and eating each other. As more bacteria appear we might expect each bacteria to grow slower and be more likely to die. That is to say, as the number of bacteria $N$ increases the per-capita growth rate $r$ decreases.
+A little thought and you will see that the problem is that a bacterial population cannot always grow at one rate. Eventually they will run out of space, or run out of food, or start fighting and eating each other. As more bacteria appear we might expect each bacteria to grow slower and be more likely to die. That is to say, as the number of bacteria <img src="https://render.githubusercontent.com/render/math?math=N>" increases the per-capita growth rate <img src="https://render.githubusercontent.com/render/math?math=r>" decreases.
 
-Let's make a new world then, one where $r$ decreases as $N$ increases. Exactly how should $r$ decrease? Well, let's make things easy on ourselves and say it decreases linearly. In that case once $N$ gets big enough $r$ will become zero and the population will stop growing. We might name the population size which does this $K$ and call it the *carrying capacity*. We might also say that the largest per-capita reproductive rate we can have is $r_{max}$. Bacteria only grow around this speed when the population size is very small. The values $r_{max}$ and $K$ are just parameters, like $r$ was in the exponential growth model. We can decide on actual values of these before running our world.
+Let's make a new world then, one where <img src="https://render.githubusercontent.com/render/math?math=r>" decreases as <img src="https://render.githubusercontent.com/render/math?math=N>" increases. Exactly how should <img src="https://render.githubusercontent.com/render/math?math=r>" decrease? Well, let's make things easy on ourselves and say it decreases linearly. In that case once <img src="https://render.githubusercontent.com/render/math?math=N>" gets big enough <img src="https://render.githubusercontent.com/render/math?math=r>" will become zero and the population will stop growing. We might name the population size which does this <img src="https://render.githubusercontent.com/render/math?math=K>" and call it the *carrying capacity*. We might also say that the largest per-capita reproductive rate we can have is <img src="https://render.githubusercontent.com/render/math?math=r_{max}>". Bacteria only grow around this speed when the population size is very small. The values <img src="https://render.githubusercontent.com/render/math?math=r_{max}>" and <img src="https://render.githubusercontent.com/render/math?math=K>" are just parameters, like <img src="https://render.githubusercontent.com/render/math?math=r>" was in the exponential growth model. We can decide on actual values of these before running our world.
 
 A nice function that will do all this for us is shown below. The vertical axis here is the effective per-capita growth rate, or the current per-captia growth rate taking into account the current population size. The vertical axis is *not* the population size.
 
 ![Logistic rate of growth](images\Logistic rate of growth.png)
 
-As we wanted, the per-capita growth rate decreases linearly as $N$ increases. Now we can take our equation for exponential growth and replace the previous static $r$ with this new dynamic growth rate.
+As we wanted, the per-capita growth rate decreases linearly as <img src="https://render.githubusercontent.com/render/math?math=N>" increases. Now we can take our equation for exponential growth and replace the previous static <img src="https://render.githubusercontent.com/render/math?math=r>" with this new dynamic growth rate.
 
 <img src="images\Logistic equation.png" alt="Logistic equation" style="zoom: 67%;" />
 
@@ -142,30 +140,30 @@ This model is called **logistic growth**, and it always makes this S-shaped curv
 
 ![image-20201112211708972](images\Logistic curve basic.png)
 
-Below I've animated it to change the values of $K$, $r_{max}$, and $N_0$ vary. Notice that if the population starts over carrying capacity the growth rate will be negative and bacteria will die until the population returns to carrying capacity.
+Below I've animated it to change the values of <img src="https://render.githubusercontent.com/render/math?math=K>", <img src="https://render.githubusercontent.com/render/math?math=r_{max}>", and <img src="https://render.githubusercontent.com/render/math?math=N_0>" vary. Notice that if the population starts over carrying capacity the growth rate will be negative and bacteria will die until the population returns to carrying capacity.
 
 ![logistic growth ani](images\logistic growth ani.gif)
 
-Notice something important: we've never specified *why* the per-capita growth rate decreases with more bacteria. It could be limited space, or competition over food, or any complex combination of factors. All we've said is that $r$ decreases linearly as $N$ increases. 
+Notice something important: we've never specified *why* the per-capita growth rate decreases with more bacteria. It could be limited space, or competition over food, or any complex combination of factors. All we've said is that <img src="https://render.githubusercontent.com/render/math?math=r>" decreases linearly as <img src="https://render.githubusercontent.com/render/math?math=N>" increases. 
 
 This is a common trick. We could of explicitly added resources and space and whatever else to our model, written down the rules of change for them, and simulated everything. But it is far simpler to keep track of only the number of bacteria and keep everything else in the back of our minds as we design the bacteria's differential equation.
 
 This differential equation also has an analytic solution, but it ain't pretty.
 
-$$N(t) = \frac{K}{1 + \left(\frac{K - N_0}{N_0}\right) e^{-r_{max} t} }$$
+<img src="https://render.githubusercontent.com/render/math?math=N(t)=\frac{K}{1+\left(\frac{K-N_0}{N_0}\right)e^{-r_{max}t}}>"
 
 Once equations start becoming more complex than this it is often impossible to find an analytic solution. By impossible I mean you can mathematically prove that such a analytic solution does not exist. In these cases we have no nice formula that gives us an answer; we have to rely on the computer to run our differential equations forward in time.
 
 
 ## But I want more than just bacteria in my world! (Lotka-Volterra Competition)
 
-A world of only bacteria is boring, no matter how the grow. Let's add another organism, say cats. This is as easy as adding a new state variable that tells us the number of cats. Let's call this variable $C$. (But note that often in two variable models the first species will be called $N_1$ and the second $N_2$.)
+A world of only bacteria is boring, no matter how the grow. Let's add another organism, say cats. This is as easy as adding a new state variable that tells us the number of cats. Let's call this variable <img src="https://render.githubusercontent.com/render/math?math=C>". (But note that often in two variable models the first species will be called <img src="https://render.githubusercontent.com/render/math?math=N_1>" and the second <img src="https://render.githubusercontent.com/render/math?math=N_2>".)
 
 It would make sense that cats and bacteria both grow logistically, and it would make sense if they don't care about each other. Bacteria can eat whatever junk they find in the dirt, cats can eat tuna, and they never interact. Such a world could be described with the following system.
 
 ![logistic cats and bact](images\logistic cats and bact.png)
 
-Here $r_{max, C}$ is the maximum per-capita growth rate of cats and $r_{max, N}$ is the maximum rate for bacteria. (Often people won't bother writing the "max" subscript, but we will.) Likewise $K_c$ and $K_b$ are their carrying capacities. We would also have some initial number of cats and bacteria: $C_0$ and $N_0$. Below is what this system's graph looks like. Notice that we now have two lines, one for cats and one for bacteria. Our world now has two creatures and we can keep track of the number of each.
+Here <img src="https://render.githubusercontent.com/render/math?math=r_{max, C}>" is the maximum per-capita growth rate of cats and <img src="https://render.githubusercontent.com/render/math?math=r_{max, N}>" is the maximum rate for bacteria. (Often people won't bother writing the "max" subscript, but we will.) Likewise <img src="https://render.githubusercontent.com/render/math?math=K_c>" and <img src="https://render.githubusercontent.com/render/math?math=K_b>" are their carrying capacities. We would also have some initial number of cats and bacteria: <img src="https://render.githubusercontent.com/render/math?math=C_0>" and <img src="https://render.githubusercontent.com/render/math?math=N_0>". Below is what this system's graph looks like. Notice that we now have two lines, one for cats and one for bacteria. Our world now has two creatures and we can keep track of the number of each.
 
 ![image-20201112214910758](images\Logistic cats and bact no interaction.png)
 
@@ -175,7 +173,7 @@ This can be done by subtracting from the rate of growth. It is usually written s
 
 ![logistic cats and bact with comp](images\logistic cats and bact with comp.png)
 
-This might look complex but it's not that bad. Focus on the top equation. Subtracting $\frac{C}{K_n}$ from the top equation is makes the per-capita growth rate of the bacteria decrease as cats increase. It works the same as how subtracting $\frac{N}{K_N}$ causes increasing numbers of bacteria to slow down the growth rate. The $\alpha_{N, C}$ is just a scaling constant which tells us *how much* the cats hurt the bacteria. The larger $\alpha_{N,C}$ is the more harm cats do. If $\alpha_{N, C}$ is negative then cats actually help bacteria and increase their growth rate. If $\alpha_{N, C}$ is zero than cats have no effect on bacteria. 
+This might look complex but it's not that bad. Focus on the top equation. Subtracting <img src="https://render.githubusercontent.com/render/math?math=\frac{C}{K_n}>" from the top equation is makes the per-capita growth rate of the bacteria decrease as cats increase. It works the same as how subtracting <img src="https://render.githubusercontent.com/render/math?math=\frac{N}{K_N}>" causes increasing numbers of bacteria to slow down the growth rate. The <img src="https://render.githubusercontent.com/render/math?math=\alpha_{N,C}>" is just a scaling constant which tells us *how much* the cats hurt the bacteria. The larger <img src="https://render.githubusercontent.com/render/math?math=\alpha_{N,C}>" is the more harm cats do. If <img src="https://render.githubusercontent.com/render/math?math=\alpha_{N,C}>" is negative then cats actually help bacteria and increase their growth rate. If <img src="https://render.githubusercontent.com/render/math?math=\alpha_{N,C}>" is zero than cats have no effect on bacteria. 
 
 The same goes for the bottom equation. Often people will have different symbols or conventions for naming the parameters, but as long as you understand the meaning of them you can read the equations. The graph of this system shows that we now can have much more complexity in the dynamics.
 
@@ -193,7 +191,7 @@ The concept of a phase space is one of the greatest insights humanity ever had. 
 
 ### Isoclines
 
-Isoclines are parts of the phase space where the change of a state variable is the same. For example, a zero isocline for bacteria would be all the points on the phase space where $\frac{dN}{dt} = 0$. (Ie. all combinations of bacteria and cat population sizes where the bacteria has a population growth rate of zero.)
+Isoclines are parts of the phase space where the change of a state variable is the same. For example, a zero isocline for bacteria would be all the points on the phase space where <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}=0>". (Ie. all combinations of bacteria and cat population sizes where the bacteria has a population growth rate of zero.)
 
 [I'll also expand on this later. For now see [this writeup](http://www.tiem.utk.edu/~gross/bioed/bealsmodules/competition.html), which goes over the competition equations and isoclines.]
 
