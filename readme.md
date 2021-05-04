@@ -16,6 +16,8 @@ Here we'll review what differential equations are along with some common ones in
 
 ## Exponential growth and rules of change
 
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
 Differential equations describe how nature changes over time. They write out the "rules of the game.''
 
 An example: say we place two hundred bacteria on a empty world. Let's say that bacteria are immortal and will replicate on average once per day. How many bacteria will there be after ten days? A hundred days? A thousand?
