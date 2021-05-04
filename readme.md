@@ -10,7 +10,7 @@ Here we'll review what differential equations are along with some common ones in
 
 
 
-*Note: This is a first draft. Let me know if you spot any mistakes or if any sections are confusing. I'll be updating these notes as I receive feedback. Equations aren't displaying properly on the [online version](https://taomsakal.github.io/Differential-Equations-for-Ecologists/) right now, but Gauchospace has a pdf version with working equations under week 6. (Though that version won't have animations!)*
+*Note: This is a first draft. Let me know if you spot any mistakes or if any sections are confusing. I'll be updating these notes as I receive feedback.
 
 
 
