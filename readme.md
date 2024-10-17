@@ -28,7 +28,7 @@ If we want to be fancy we can write this out in mathematical notation.
 
 ![exp growth differential](images\exp growth differential.png)
 
-Same equation and same meaning. We've just given everything shorter names. The variable <img src="https://render.githubusercontent.com/render/math?math=N"> is the total number of bacteria, and <img src="https://render.githubusercontent.com/render/math?math=\frac{dN}{dt}"> is the new bacteria per day. The <img src="https://render.githubusercontent.com/render/math?math=t"> represents our unit of time, which is one day. 
+Same equation and same meaning. We've just given everything shorter names. The variable $N$ is the total number of bacteria, and $\frac{dN}{dt}$ is the new bacteria per day. The <img src="https://render.githubusercontent.com/render/math?math=t"> represents our unit of time, which is one day. 
 
 We see that the per-captia rate of growth (the green term) is one. This is because in our world when each bacteria divides we get two daughter cells -- a grand total of one bacteria more than what we started with. 
 
