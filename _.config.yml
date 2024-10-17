@@ -1,22 +1,18 @@
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
-  -head.html
-kramdown:
-  math_engine: mathjax
+title: Differential Equation for Ecologists
+description: A tutorial on differential equations in population biology.
 markdown: kramdown
+theme: minima  # You can choose a different theme if you prefer
+
 kramdown:
   math_engine: mathjax
   syntax_highlighter_opts:
-    disable : true
+    disable: true
+
+# Specify the default layout
+defaults:
+  -
+    scope:
+      path: "" # All files in the project
+      type: "pages"
+    values:
+      layout: "default"
