@@ -20,7 +20,7 @@ This is nothing more than a thought experiment, but it is a thought experiment t
 
 If we want to be fancy, we can write this out in mathematical notation.
 
-![exp growth differential](images/exp_growth_differential.png)
+![exp growth differential](images\exp_growth_differential.png)
 
 Same equation and same meaning. We've just given everything shorter names. The variable \( N \) is the total number of bacteria, and \( \frac{dN}{dt} \) is the new bacteria per day. The \( t \) represents our unit of time, which is one day. 
 
